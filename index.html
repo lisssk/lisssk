@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -10,8 +10,8 @@
 </style>
 </head>
 <body>
-<main class="card"><div class="eyebrow">Indonesia 2026</div><h1>Countdown Indonesia</h1><div class="date">6. November 2026</div><section class="countdown" aria-label="Countdown"><div class="unit"><span class="num" id="days">--</span><span class="label">Tage</span></div><div class="unit"><span class="num" id="hours">--</span><span class="label">Stunden</span></div><div class="unit"><span class="num" id="minutes">--</span><span class="label">Minuten</span></div><div class="unit"><span class="num" id="seconds">--</span><span class="label">Sekunden</span></div></section><div class="footer" id="footer">Start packing!</div></main>
+<main class="card"><div class="eyebrow">Indonesia 2026</div><h1>Countdown Indonesia</h1><div class="date">November 6, 2026</div><section class="countdown" aria-label="Countdown"><div class="unit"><span class="num" id="days">--</span><span class="label">Days</span></div><div class="unit"><span class="num" id="hours">--</span><span class="label">Hours</span></div><div class="unit"><span class="num" id="minutes">--</span><span class="label">Minutes</span></div><div class="unit"><span class="num" id="seconds">--</span><span class="label">Seconds</span></div></section><div class="footer" id="footer">Start packing!</div></main>
 <script>
-const target=new Date(2026,10,6,20,55,0).getTime();function tick(){let d=target-Date.now();if(d<=0){document.querySelector('.countdown').innerHTML="<div style='grid-column:1/-1;font-size:34px;padding:24px'>Indonesia ist da.</div>";document.getElementById('footer').textContent='';return}const day=86400000,hour=3600000,min=60000;document.getElementById('days').textContent=Math.floor(d/day);d%=day;document.getElementById('hours').textContent=String(Math.floor(d/hour)).padStart(2,'0');d%=hour;document.getElementById('minutes').textContent=String(Math.floor(d/min)).padStart(2,'0');d%=min;document.getElementById('seconds').textContent=String(Math.floor(d/1000)).padStart(2,'0')}tick();setInterval(tick,1000);
+const target=new Date(2026,10,6,20,55,0).getTime();function tick(){let d=target-Date.now();if(d<=0){document.querySelector('.countdown').innerHTML="<div style='grid-column:1/-1;font-size:34px;padding:24px'>Indonesia is here.</div>";document.getElementById('footer').textContent='';return}const day=86400000,hour=3600000,min=60000;document.getElementById('days').textContent=Math.floor(d/day);d%=day;document.getElementById('hours').textContent=String(Math.floor(d/hour)).padStart(2,'0');d%=hour;document.getElementById('minutes').textContent=String(Math.floor(d/min)).padStart(2,'0');d%=min;document.getElementById('seconds').textContent=String(Math.floor(d/1000)).padStart(2,'0')}tick();setInterval(tick,1000);
 </script>
 </body></html>
