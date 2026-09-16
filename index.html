@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b332b">
+<title>index.html</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{min-height:100vh;display:grid;place-items:center;color:#fff;background:linear-gradient(rgba(5,31,27,.35),rgba(5,31,27,.72)),url('https://images.unsplash.com/photo-1533669955142-6a73332af4db?auto=format&fit=crop&w=1800&q=85') center/cover fixed}.card{width:min(92vw,760px);padding:46px 24px 40px;border-radius:30px;background:rgba(8,43,37,.54);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);box-shadow:0 24px 70px rgba(0,0,0,.28);text-align:center}.eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:12px;opacity:.78;margin-bottom:12px}h1{font-family:Georgia,serif;font-size:clamp(38px,8vw,68px);font-weight:400;margin:0 0 10px}.date{font-size:17px;opacity:.88;margin-bottom:34px}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.unit{padding:19px 7px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}.num{display:block;font-size:clamp(30px,8vw,54px);font-weight:650;line-height:1}.label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;opacity:.72;margin-top:10px}.footer{margin-top:28px;font-size:15px;opacity:.82}@media(max-width:520px){.card{padding:38px 14px 32px;border-radius:26px}.countdown{gap:6px}.unit{padding:16px 3px}}
+</style>
+</head>
+<body>
+<main class="card"><div class="eyebrow">Indonesia 2026</div><h1>Countdown Indonesia</h1><div class="date">6. November 2026</div><section class="countdown" aria-label="Countdown"><div class="unit"><span class="num" id="days">--</span><span class="label">Tage</span></div><div class="unit"><span class="num" id="hours">--</span><span class="label">Stunden</span></div><div class="unit"><span class="num" id="minutes">--</span><span class="label">Minuten</span></div><div class="unit"><span class="num" id="seconds">--</span><span class="label">Sekunden</span></div></section><div class="footer" id="footer">Start packing!</div></main>
+<script>
+const target=new Date(2026,10,6,20,55,0).getTime();function tick(){let d=target-Date.now();if(d<=0){document.querySelector('.countdown').innerHTML="<div style='grid-column:1/-1;font-size:34px;padding:24px'>Indonesia ist da.</div>";document.getElementById('footer').textContent='';return}const day=86400000,hour=3600000,min=60000;document.getElementById('days').textContent=Math.floor(d/day);d%=day;document.getElementById('hours').textContent=String(Math.floor(d/hour)).padStart(2,'0');d%=hour;document.getElementById('minutes').textContent=String(Math.floor(d/min)).padStart(2,'0');d%=min;document.getElementById('seconds').textContent=String(Math.floor(d/1000)).padStart(2,'0')}tick();setInterval(tick,1000);
+</script>
+</body></html>
